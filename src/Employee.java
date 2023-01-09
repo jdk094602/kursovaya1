@@ -15,7 +15,7 @@ public class Employee {
         this.name = name;
         this.patronymic = patronymic;
         this.lastName = lastName;
-        this.fullName = name + " " + patronymic + " " + lastName;
+        this.fullName = lastName + " " + name + " " + patronymic;
         this.dept = dept;
         this.salary = salary;
         cnt++;
@@ -62,7 +62,7 @@ public class Employee {
     }
 
     public void setFullName() {
-        this.fullName = this.name + " " + this.patronymic  + " " + this.lastName;
+        this.fullName = this.lastName  + " " + this.name + " " + this.patronymic;
     }
 
     public void setDept(int dept) {
@@ -75,7 +75,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Сотрудник id= " + id + " " + fullName + " из отдела " + dept ;
+        return "Сотрудник id= " + id + " " + fullName + " из отдела " + dept + ". На ставке " + String.format("%.2f",salary) ;
     }
 
     @Override

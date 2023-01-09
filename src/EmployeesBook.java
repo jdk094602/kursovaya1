@@ -55,7 +55,7 @@ public class EmployeesBook {
         }
         return sumSalary;
     }
-    public float FindAvgSalay() {
+    public float FindAvgSalay()  {
         int sumEmployee = 0;
         for (int i = 0; i< empl.length; i++) {
             if (empl[i] == null) { continue; }

@@ -11,6 +11,6 @@ public class Main {
         empBook.FindMinSalay();
         System.out.printf("Средняя ставка по больнице  = %.2f",empBook.FindAvgSalay());
         empBook.listFullName();
-        //System.out.println("Hello world!");
+        // System.out.println("Hello world!");
     }
 }
