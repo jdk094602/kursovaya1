@@ -21,7 +21,7 @@ public class EmployeesBook {
       }
     }
 
-    public void FindMaxSalay() {
+    public Employee findMaxSalay() {
         float maxSalary = 0;
         int indexMaxEmployee = 0;
         for (int i = 0; i< empl.length; i++) {
@@ -31,10 +31,10 @@ public class EmployeesBook {
                 indexMaxEmployee = i ;
             }
         }
-        System.out.println("Максимальная ставка у сотрудника: " + empl[indexMaxEmployee].getFullName());
+        return empl[indexMaxEmployee];
 
     }
-    public void FindMinSalay() {
+    public Employee findMinSalay() {
         float minSalary = 1000000000;
         int indexMinEmployee = 0;
         for (int i = 0; i< empl.length; i++) {
@@ -44,10 +44,10 @@ public class EmployeesBook {
                 indexMinEmployee = i ;
             }
         }
-        System.out.println("Минимальная ставка у сотрудника: " + empl[indexMinEmployee].getFullName());
+        return empl[indexMinEmployee];
 
     }
-    public float FindTotalSalay() {
+    public float findTotalSalay() {
         float sumSalary = 0;
         for (int i = 0; i< empl.length; i++) {
             if (empl[i] == null) { continue; }
@@ -55,13 +55,13 @@ public class EmployeesBook {
         }
         return sumSalary;
     }
-    public float FindAvgSalay()  {
+    public float findAvgSalay()  {
         int sumEmployee = 0;
         for (int i = 0; i< empl.length; i++) {
             if (empl[i] == null) { continue; }
             sumEmployee++;
         }
-        return FindTotalSalay() / sumEmployee;
+        return findTotalSalay() / sumEmployee;
     }
 
     public void listFullName () {
